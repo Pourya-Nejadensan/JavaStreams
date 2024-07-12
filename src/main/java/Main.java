@@ -9,5 +9,9 @@ public class Main {
         System.out.println("Step 2 ------------------------------------------------");
 
         integerList.stream().map(integer -> integer * 2).forEach(System.out::println);
+
+        System.out.println("Step 3 ------------------------------------------------");
+
+        integerList.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
     }
 }
