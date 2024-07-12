@@ -13,5 +13,10 @@ public class Main {
         System.out.println("Step 3 ------------------------------------------------");
 
         integerList.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+        System.out.println("Step 4 ------------------------------------------------");
+
+        int sum = integerList.stream().reduce(0, Integer::sum);
+        System.out.println("Sum: " + sum);
     }
 }
