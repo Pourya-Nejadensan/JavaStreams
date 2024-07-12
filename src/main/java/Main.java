@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -18,5 +19,10 @@ public class Main {
 
         int sum = integerList.stream().reduce(0, Integer::sum);
         System.out.println("Sum: " + sum);
+
+        System.out.println("Step 6 ------------------------------------------------");
+
+        Map<Integer,Integer> integerMap = integerList.stream().collect(Collectors.toMap( Function.identity(),Function.identity()));
+        System.out.println(integerMap);
     }
 }
